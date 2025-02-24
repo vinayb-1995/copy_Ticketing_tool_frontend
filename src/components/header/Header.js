@@ -43,17 +43,17 @@ const Header = () => {
   const customerAllData = useSelector(
     (state) => state.allCustomer.customerData
   );
-  // console.log("fetchCustomerAllData>>", customerAllData);
+  console.log("fetchCustomerAllData>>", customerAllData);
   const agentsData = useSelector((state) => state.allAgents.AgentsData);
-  // console.log("fetchAgentsAllData>>", agentsData);
+  console.log("fetchAgentsAllData>>", agentsData);
 
   const allTicketsData = useSelector(
     (state) => state.alltickets.allTicketsData
   );
-  // console.log("allTicketsData", allTicketsData);
+  console.log("allTicketsData", allTicketsData);
 
   const allAgentsData = useSelector((state) => state.allAgents.allAgentsData);
-  // console.log("allAgentsData>>", allAgentsData);
+  console.log("allAgentsData>>", allAgentsData);
 
   useEffect(() => {
     if (getRole === "admin") {

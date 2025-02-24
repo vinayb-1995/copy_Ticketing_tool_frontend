@@ -1,0 +1,532 @@
+/*------------- common colors ------------- */
+$primary-color: #4267b2;
+$white-color: #fff;
+$black-color: #000;
+$blue-shadow: rgba(165, 193, 253, 0.5);
+/*------------- common colors ------------- */
+/* dancing font */
+$dancing-font: "Dancing Script", cursive;
+$great-font: "Great Vibes", cursive;
+$Pacifico-font: "Pacifico", cursive;
+$lobster-font: "Lobster Two", sans-serif;
+/* dancing font */
+/* ----------- common font size-------------- */
+$small-font-size: 12px;
+$medium-font-size: 18px;
+$large-font-size: 24px;
+$extra-large-font-size: 28px;
+/* ----------- common font size-------------- */
+
+/*=================styles for component=============== */
+
+/* --------common styel----- */
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
+/* --------common styel----- */
+
+/* ----------------- header style starts ----------*/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-color;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  p {
+    margin: 0;
+  }
+  /* logo start  */
+  .logo {
+    p {
+      color: $white-color;
+      font-size: $medium-font-size;
+      cursor: pointer;
+    }
+  }
+  /* logo end*/
+  /* companyheading */
+  .companyheading {
+    display: flex;
+    // justify-content: end;
+    p {
+      color: $white-color;
+      font-size: $extra-large-font-size;
+      // font-family: $dancing-font;
+      // font-family:$Pacifico-font;
+      font-family: $lobster-font;
+      font-weight: 400;
+      text-wrap: nowrap;
+    }
+  }
+  /* companyheading */
+
+  /* auth-links */
+  .auth-links {
+    display: flex;
+    .link {
+      color: $white-color;
+      transition: text-shadow 0.1s ease;
+      .icons {
+        font-size: $medium-font-size;
+      }
+      &:hover {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        .icons {
+          // font-size: 24px;
+          text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+
+          transition: font-size 0.1s ease; // Optional smooth transition
+        }
+      }
+      p {
+        font-size: $medium-font-size;
+      }
+    }
+  }
+  /* auth-links */
+}
+/* -------- header style ends -------------- */
+
+/* --------- common input field start ----------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); // Semi-transparent white background
+  padding: 30px;
+  width: 460px;
+  border-radius: 20px;
+  backdrop-filter: blur(100px); // Blur for glass effect
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+  border: 1px solid rgba(13, 0, 255, 0.3); // Optional border for glassy edge
+  @media (max-width: 768px) {
+    // Tablet size
+    width: 90%;
+    padding: 20px;
+  }
+  @media (max-width: 480px) {
+    // Mobile size
+    width: 340px;
+    padding: 15px;
+  }
+  .form-header {
+    P {
+      color: $primary-color;
+      font-family: $Pacifico-font;
+      font-size: $extra-large-font-size;
+      font-weight: 500;
+    }
+  }
+  .flex-column {
+    label {
+      color: $black-color;
+      font-weight: 600;
+    }
+  }
+  .inputForm {
+    border: 1.5px solid #cacfca;
+    border-radius: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    transition: 0.2s ease-in-out;
+    &:focus-within {
+      border: 1.5px solid $primary-color;
+    }
+    .input {
+      margin-left: 10px;
+      border-radius: 10px;
+      border: none;
+      width: 100%;
+      height: 100%;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+
+    div > label {
+      font-size: 14px;
+      color: $black-color;
+      font-weight: 400;
+    }
+  }
+  .span {
+    font-size: 14px;
+    margin-left: 5px;
+    color: $primary-color;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .p {
+    text-align: center;
+    color: $black-color;
+    font-size: 14px;
+    margin: 5px 0;
+  }
+}
+.error {
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+/* --------- common input field end ----------- */
+
+/* --------------buttonstyle1 start -------------- */
+.button-style1 {
+  --color: #4267b2;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.1s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 118px;
+    width: 500px;
+    border-radius: 50%;
+    top: 100%;
+    left: 100%;
+    transition: all 0.5s;
+  }
+  &:hover {
+    color: #fff;
+
+    &:before {
+      top: -30px;
+      left: -30px;
+    }
+  }
+
+  // &:active:before {
+  //   background: #3a0ca3;
+  //   transition: background 0s;
+  // }
+}
+
+/* --------------buttonstyle1 end -------------- */
+
+/* --------------NavigationBackButton start -------------- */
+.navigation-button {
+  color: $white-color;
+  font-size: 20px;
+  background-color: $primary-color;
+  margin: 0;
+  padding: 4px 16px;
+  border: 1px solid $primary-color;
+  border-radius: 6px;
+  &:hover {
+    box-shadow: 0 4px 8px $blue-shadow;
+  }
+}
+/* --------------NavigationBackButton end -------------- */
+
+/* --------------Headings start -------------- */
+.secondary-headings {
+  .heading-name {
+    p {
+      margin: 0px;
+      font-size: $large-font-size;
+      color: $primary-color;
+      font-weight: 500;
+    }
+  }
+}
+/* --------------Headings end -------------- */
+
+/* --------------scrollOption for dropDownField start -------------- */
+.srcrollable-containe {
+  overflow-y: scroll;
+  height: 100px;
+  &::-webkit-scrollbar {
+    display: none; // Hides scrollbar in Webkit-based browsers (Chrome, Safari, etc.)
+  }
+}
+/* --------------scrollOption for dropDownField end -------------- */
+
+/* --------------INputField start -------------- */
+/* Conditional input field component style start */
+.group {
+  display: flex;
+  line-height: 30px;
+  align-items: center;
+  position: relative;
+  max-width: auto;
+}
+.inputs {
+  width: 100%;
+  height: 40px;
+  line-height: 30px;
+  padding: 0 1rem;
+  padding-left: 3rem;
+  border: 0.5px solid #cacfca;
+  border-radius: 10px;
+  outline: none;
+  background-color: #f8fafc;
+  color: #0d0c22;
+  transition: 0.5s ease;
+  &[type="file"] {
+    padding: 2px 3rem;
+  }
+  &::placeholder {
+    color: #94a3b8;
+  }
+  &:focus,
+  &:hover {
+    outline: none;
+    border-color: rgba(129, 140, 248);
+    background-color: #fff;
+    box-shadow: 0 0 0 5px rgb(129 140 248 / 4%);
+  }
+}
+.file-input {
+  width: 100%;
+  height: 40px;
+  line-height: 22px;
+  padding-top: 6px;
+  padding-left: 3rem;
+  border: 0.5px solid #cacfca;
+  border-radius: 10px;
+  outline: none;
+  background-color: #f8fafc;
+  color: #0d0c22;
+  transition: 0.5s ease;
+}
+.iconss {
+  position: absolute;
+  left: 1rem;
+  fill: none;
+  width: 1rem;
+  height: 1rem;
+}
+/* Conditional input field component style end */
+/* --------------INputField end -------------- */
+
+/* --------------dropdownfield start -------------- */
+.dropdown {
+  width: 100%;
+  height: 40px;
+  line-height: 30px;
+  display: flex;
+  // justify-content: start;
+  align-items: center;
+  padding: 0 0.4rem;
+  // padding-left: 0.5rem;
+  border: 0.5px solid #cacfca;
+  border-radius: 10px;
+  outline: none;
+  background-color: #f8fafc;
+  color: #0d0c22;
+  transition: 0.5s ease;
+  &::placeholder {
+    color: #94a3b8;
+  }
+  &:focus,
+  &:hover {
+    outline: none;
+    border-color: rgba(129, 140, 248);
+    background-color: #fff;
+    box-shadow: 0 0 0 5px rgb(129 140 248 / 4%);
+  }
+  .icons {
+    padding: 0px 14px;
+    flex: 0%;
+    margin: 0;
+  }
+  .dropdownfield {
+    .rw-widget-picker {
+      border: none !important;
+      box-shadow: none !important;
+      background-color: #f8fafc;
+      &:focus,
+      &:hover {
+        background-color: #fff;
+      }
+    }
+    .rw-state-focus .rw-widget-picker .rw-widget-input {
+      border: none !important;
+      box-shadow: none !important;
+      border-color: transparent !important; // Ensure the border-color is removed
+    }
+    .rw-state-focus .rw-widget-picker {
+      border: none !important;
+      box-shadow: none !important;
+      border-color: transparent !important; // Ensure the border-color is removed
+    }
+    .rw-dropdown-list-input {
+      padding: 0px;
+    }
+    .rw-list-option {
+      padding: 0px;
+      padding-left: 10px;
+      margin: 0;
+    }
+  }
+}
+/* --------------dropdownfield end -------------- */
+
+/* --------------TextAreaField start -------------- */
+.TextAreaField {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: 0.5px solid #cacfca;
+  border-radius: 10px;
+  background-color: #f8fafc;
+  color: #0d0c22;
+  position: relative;
+  transition: 0.5s ease;
+  textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: inherit;
+    padding-top: 6px;
+    line-height: 1.5;
+    padding-left: 3rem;
+    border-radius: 18px;
+    resize: vertical;
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+    &::placeholder {
+      color: #94a3b8;
+    }
+    &:focus,
+    &:hover {
+      border-color: rgba(129, 140, 248);
+      background-color: #fff;
+      box-shadow: 0 0 0 5px rgb(129 140 248 / 4%);
+    }
+  }
+  .icons {
+    position: absolute;
+    left: 0.2rem;
+    fill: none;
+    width: 1rem;
+    height: 1rem;
+    padding: 0px 14px;
+    flex: 0%;
+    svg {
+      margin-top: -29px;
+    }
+  }
+}
+/* --------------TextAreaField end -------------- */
+
+/* --------------DataTable start -------------- */
+.data-table-outer-layer {
+  border: 1px solid $primary-color;
+  border-radius: 8px;
+  .rdt_Pagination {
+    // border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .rdt_TableHead {
+    font-size: 16px;
+    font-weight: 700;
+
+    .rdt_TableHeadRow {
+      min-height: 36px;
+    }
+  }
+  .rdt_TableRow {
+    min-height: 40px;
+    .rdt_TableCell {
+      &:hover {
+        // cursor: pointer;
+        background-color: #fff;
+      }
+    }
+  }
+}
+/* --------------DataTable end -------------- */
+
+/* --------------ticket_status start -------------- */
+.tiketstatus {
+  .tiket-status {
+    .icon{
+      background-color: rgb(181, 181, 217);
+      height: 100%;
+      width : 82px;
+      color: #fff;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;    
+     z-index: -9;
+      span{
+        padding: 10px;
+        font-size: 35px;
+      }
+    }
+    p {
+      color: $primary-color;
+      font-size: 18px;
+      white-space: nowrap;  
+    }
+    h3 {
+      color: $primary-color;
+    }
+    h2 {
+      color: $primary-color;
+    }
+    border: 2px solid $primary-color;
+    border-radius: 4px;
+    // padding: 8px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    transition: box-shadow 0.1s ease-in-out;
+    cursor: pointer;
+    padding-left:0px;
+    &:hover {
+      box-shadow: 0 4px 8px $blue-shadow;
+      p {
+        text-shadow: 2px 2px 4px $blue-shadow;
+        transition: text-shadow 0.1s ease-in-out;
+      }
+    }
+  }
+}
+/* --------------tickte_status end -------------- */
